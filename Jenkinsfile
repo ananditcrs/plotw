@@ -35,6 +35,13 @@ environment {
         }
       }
     }
+    stage('Run Container on Dev Server'){
+      steps {
+        script {
+        def dockerRun = 'docker run -p 8080:8080 -d --name my-app ${env.registry} + ":$BUILD_NUMBER"'
+      }
+      }
+   }
     /*
     Just in case if you've deployed your container then you could test w/ it
     */
