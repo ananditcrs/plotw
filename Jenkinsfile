@@ -2,7 +2,7 @@ pipeline {
 
   agent any
   parameters {
-        string(name: 'IMAGE_NAME', defaultValue: 'plotwifeFlaskapp', description: 'Ume docker image name')
+        string(name: 'IMAGE_NAME', defaultValue: 'plotwifeFlaskapp', description: 'Use docker image name')
     }
 environment {
     imagename = "${params.IMAGE_NAME}"
